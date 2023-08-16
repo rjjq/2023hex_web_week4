@@ -1,5 +1,4 @@
 // Banner 
-
 .banner {
     background: url(../images/home-header.png) center / cover;
     height: 787px;
@@ -57,8 +56,13 @@
     }
 }
 
-// content1
-.content1 {
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+// features
+.features {
     background-color: $primary-pink;
     padding: 80px 0;
 
@@ -67,12 +71,7 @@
     }
 }
 
-.content-wrap {
-    display: flex;
-    flex-direction: column;
-}
-
-.content1-title {
+.features-title {
     width: 100%;
     font-size: 48px;
     font-weight: bold;
@@ -85,7 +84,7 @@
     }
 }
 
-.content1-cards {
+.features-cards {
     display: flex;
 
     @media (max-width: 768px) {
@@ -97,7 +96,7 @@
     }
 }
 
-.content1-item {
+.features-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,23 +111,23 @@
         flex-wrap: wrap;
         width: 100%;
     }
+
+    .card-img {
+        width: 83.33px;
+        height: 83.33px;
+        margin-bottom: 24px;
+    }
+    
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $text-red;
+        margin-bottom: 8px;
+    }
 }
 
-.card-img {
-    width: 83.33px;
-    height: 83.33px;
-    margin-bottom: 24px;
-}
-
-.card-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: $text-red;
-    margin-bottom: 8px;
-}
-
-// content2
-.content2 {
+// classic-frame
+.classic-frame {
     padding: 80px 0;
 
     @media (max-width: 375px) {
@@ -136,7 +135,7 @@
     }
 }
 
-.content2-title {
+.classic-frame-title {
     font-size: 48px;
     font-weight: bold;
     color: $text-red;
@@ -149,7 +148,7 @@
     }
 }
 
-.content2-cards {
+.classic-frame-cards {
     display: flex;
 
     @media (max-width: 992px) {
@@ -157,7 +156,7 @@
     }
 }
 
-.content2-item {
+.classic-frame-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,29 +170,29 @@
     @media (max-width: 375px) {
         padding: 0;
     }
-}
 
-.card-img-2 {
-    margin-bottom: 8px;
-
-    @media (max-width: 992px) {
-        width: 50%;
+    .card-img {
+        margin-bottom: 8px;
+    
+        @media (max-width: 992px) {
+            width: 50%;
+        }
+    
+        @media (max-width: 375px) {
+            width: 100%;
+        }
     }
-
-    @media (max-width: 375px) {
-        width: 100%;
+    
+    .card-title {
+        font-size: 48px;
+        font-weight: bold;
+        font-style: italic;
+        color: $primary-red;
     }
 }
 
-.card-title-2 {
-    font-size: 48px;
-    font-weight: bold;
-    font-style: italic;
-    color: $primary-red;
-}
-
-// Content3
-.content3 {
+// crossover
+.crossover {
     background: url(../images/index-bg.png) center / cover;
     padding: 80px 0;
     
@@ -202,7 +201,7 @@
     }
 }
 
-.content3-title {
+.crossover-title {
     font-size: 48px;
     font-weight: bold;
     color: $white;
@@ -216,7 +215,7 @@
     }
 }
 
-.content3-cards {
+.crossover-cards {
     display: flex;
     
     @media (max-width: 768px) {
@@ -224,7 +223,7 @@
     }
 }
 
-.content3-item {
+.crossover-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,26 +246,25 @@
             margin-bottom: 24px;
         }
     }
+
+    .card-title {
+        background-color: $white;
+        width: 100%;
+        font-size: 48px;
+        font-weight: bold;
+        font-style: italic;
+        color: $primary-red;
+        text-align: center;
+        padding: 8px 0;
+    }
+    
+    .card-img {
+        width: 100%;
+    }
 }
 
-
-.card-title-3 {
-    background-color: $white;
-    width: 100%;
-    font-size: 48px;
-    font-weight: bold;
-    font-style: italic;
-    color: $primary-red;
-    text-align: center;
-    padding: 8px 0;
-}
-
-.card-img-3 {
-    width: 100%;
-}
-
-// Content4
-.content4 {
+// recommendation
+.recommendation {
     padding: 80px 0;
     
     @media (max-width: 375px) {
@@ -274,7 +272,7 @@
     }
 }
 
-.content4-title {
+.recommendation-title {
     font-size: 48px;
     font-weight: bold;
     color: $text-red;
@@ -287,7 +285,7 @@
     }
 }
 
-.content4-cards {
+.recommendation-cards {
     display: flex;
     gap: 24px;
 
@@ -300,7 +298,7 @@
     }
 }
 
-.content4-item {
+.recommendation-item {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -315,27 +313,27 @@
         width: 100%;
         padding: 0;
     }
+
+    .card-img {
+        margin-bottom: 16px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+        margin-left: 16px;
+    }
 }
 
-.card-img-4 {
-    margin-bottom: 16px;
-}
-
-.card-title-4 {
-    font-size: 16px;
-    margin-bottom: 8px;
-    margin-left: 16px;
-}
-
-.content4-item-content {
+.recommendation-item-content {
     height: 206px;
 }
 
-.content4-comment {
+.recommendation-comment {
     margin: 0 16px;
 }
 
-.content4-date {
+.recommendation-date {
     font-size: 14px;
     color: $text-gray;
     justify-self: end;
@@ -346,12 +344,8 @@
     margin-bottom: 16px;
 }
 
-// Content 5
-.content-wrap {
-    align-items: center;
-}
-
-.content5 {
+// Contact-us
+.contact-us {
     background-color: $primary-pink;
     padding: 80px 0;
     
@@ -360,7 +354,7 @@
     }
 }
 
-.content5-title {
+.contact-us-title {
     font-size: 48px;
     font-weight: bold;
     color: $text-red;
@@ -373,7 +367,7 @@
     }
 }
 
-.content5-form {
+.contact-us-form {
     padding: 0 12px;
     display: flex;
     flex-direction: column;
@@ -387,16 +381,16 @@
     }
 }
 
-.content5-info {
+.contact-us-info {
     font-size: 20px;
     margin-bottom: 24px;
 }
 
-.content5-input-group {
+.contact-us-input-group {
     width: 100%;
 }
 
-.content5-input-item {
+.contact-us-input-item {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
